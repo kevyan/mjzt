@@ -1,0 +1,56 @@
+{
+    "compilerOptions": {
+        "rootDir": "src",
+        "declarationDir": "./decl",
+        "outDir": "./build/",
+
+        "composite": true,
+        // "allowJs": true,
+        "esModuleInterop": true,
+
+        "baseUrl": "./",
+        "paths": {
+            "@ui/App/*": ["src/components/*"],
+            "@ui/Layouts/*": ["src/components/layouts/*"],
+            "@ui/Pages/*": ["src/components/pages/*"],
+            "@ui/Actions/*": ["src/components/actions/*"],
+            "@ui/Models/*": ["src/components/models/*"],
+            "@ui/Reducers/*": ["src/components/reducers/*"],
+            "@ui/Store/*": ["src/components/store/*"]
+        },
+
+        "jsx": "react",
+        "moduleResolution": "node",
+        "sourceMap": true,
+
+        "module": "esnext",
+        "target": "es5",
+
+        "lib": [
+            "dom",
+            "dom.iterable",
+            "es5",
+            "es2015",
+            "es2016"
+        ],
+
+        "noImplicitReturns": true,
+        "noImplicitThis": true,
+        "noImplicitAny": true,
+        "strictNullChecks": true,
+        "noUnusedLocals": true,
+
+        "plugins": [{
+            "transform": "typescript-transform-paths",
+            "afterDeclarations": true
+        }]
+    },
+
+    "include": [
+        "./src/**/*"
+    ],
+
+    "exclude": [
+        "node_modules"
+    ]
+}
